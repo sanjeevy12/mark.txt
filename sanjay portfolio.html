@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #1d1f20, #3c3f41);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 28px;
+      color: #00fff7;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 300;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00fff7;
+    }
+
+    section {
+      padding: 120px 50px 60px;
+      min-height: 100vh;
+      animation: fadeInSlow 2.5s ease-in-out;
+    }
+
+    @keyframes fadeInSlow {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      color: #00fff7;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      padding: 20px;
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      color: #aaa;
+    }
+
+    .btn {
+      background: #00fff7;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #00bfbf;
+    }
+
+    #about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    #about .text {
+      flex: 1 1 60%;
+    }
+
+    #about .photo {
+      flex: 1 1 35%;
+      text-align: center;
+    }
+
+    #about .photo img {
+      width: 280px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      transition: transform 0.6s ease;
+    }
+
+    #about .photo img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hello, I'm a Passionate Developer</h2>
+    <p>Creative thinker with a passion for developing innovative tech solutions using modern tools like IoT, embedded systems, and basic AI. Seeking opportunities to bring value and spark positive impact.</p>
+  </section>
+
+  <section id="about">
+    <div class="text">
+      <h2>About Me</h2>
+      <p>I am a motivated and detail-oriented engineer with a strong foundation in electronics, programming, and prototyping. I strive to build impactful solutions with a human-centered approach, always aiming to blend functionality with user experience. Ready to take on fresh challenges and grow with the team I work with.</p>
+    </div>
+    <div class="photo">
+      <img src="test\images\8b9aa08f-3be4-4e99-a011-5405a101a956.jpg" alt="Your Photo">
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Smart Automation System</h3>
+        <p>Designed an IoT-based home automation system that controls lighting and appliances via mobile interface.</p>
+      </div>
+      <div class="card">
+        <h3>Personal Portfolio Site</h3>
+        <p>Developed a responsive portfolio with animations and a clean UI to showcase my personal and professional work.</p>
+      </div>
+      <div class="card">
+        <h3>Mini AI Chatbot</h3>
+        <p>Built a beginner AI chatbot that can hold basic conversations and provide logical responses using Python.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Build fast, responsive, and clean websites with engaging design and user experience.</p>
+      </div>
+      <div class="card">
+        <h3>Embedded Systems</h3>
+        <p>Develop microcontroller-based projects with real-time monitoring and automation.</p>
+      </div>
+      <div class="card">
+        <h3>Tech Consulting</h3>
+        <p>Offer strategic advice for startups or individuals exploring tech integration in products or workflows.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a style="color: #00fff7;" href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>LinkedIn: <a style="color: #00fff7;" href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Professional Portfolio</p>
+  </footer>
+
+  <script>
+    // Smooth Scroll
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
